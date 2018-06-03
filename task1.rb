@@ -1,4 +1,3 @@
-
 def loe(phrase)
   if phrase.downcase.scan(/\w/).eql?(phrase.downcase.scan(/\w/).reverse)
     puts 'YES'
