@@ -1,3 +1,4 @@
+=begin
 def formatted_duration(x,y)
   hours = (x+y) / (60 * 60)
   minutes = ((x+y) / 60) % 60
@@ -28,3 +29,4 @@ def formatted_duration(x,y)
 end
 
 puts formatted_duration(ARGV[0].to_i,ARGV[0].to_i)
+=end
