@@ -1,4 +1,4 @@
-=begin
+
 aa = "января февраля марта апреля мая июня июля августа сентября октября ноября декабря".scan(/[а-яА-ЯЁё]{3,}/)
 
 year = ARGV[2].to_s
@@ -11,8 +11,7 @@ def days22 (x,y,z)
   b = Time.local(x1,1,1,0,0,0)
   c = (b - a)
   d = (c/86400).to_i
-  return d - 1
+  return d
 end
 
 puts days22(year,month,day)
-=end

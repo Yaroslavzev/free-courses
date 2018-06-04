@@ -25,7 +25,7 @@ def formatted_duration(x,y)
   succ_m1 = succ_m.call(minutes)
   succ_s1 = succ_s.call(seconds)
 
-  return ["#{ hours } #{succ_h1}", "#{ minutes } #{succ_m1}", "#{ seconds } #{succ_s1}"].select { |str| str =~ /[1-9]/ }
+  return ["#{ hours } #{succ_h1}", "#{ minutes } #{succ_m1}", "#{ seconds } #{succ_s1}"].select { |str| str =~ /[1-9]/ }.join(' ')
 end
 
 puts formatted_duration(ARGV[0].to_i,ARGV[0].to_i)

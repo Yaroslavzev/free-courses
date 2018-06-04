@@ -1,8 +1,17 @@
-def loe(phrase)
-  if phrase.downcase.scan(/\w/).eql?(phrase.downcase.scan(/\w/).reverse)
-    puts 'YES'
-  else
-    puts 'NO'
+class User
+
+  def initialize(phrase)
+    @phrase = phrase
+  end
+
+  def palindrome
+    if @phrase.downcase.scan(/\w/).eql?(@phrase.downcase.scan(/\w/).reverse)
+      return 'YES'
+    else
+      return 'NO'
+    end
   end
 end
-loe(ARGV[0].to_s)
+
+newdata = User.new(ARGV[0].to_s)
+puts newdata.palindrome
