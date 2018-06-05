@@ -5,10 +5,18 @@ class User
   end
 
   def palindrome
-    if @phrase.downcase.scan(/\w/).eql?(@phrase.downcase.scan(/\w/).reverse)
-      return 'YES'
+    if (@phrase.downcase).class == "NilClass"
+       if @phrase.scan(/\w/).eql?(@phrase.scan(/\w/).reverse)
+         return 'YES'
+       else
+         return 'NO'
+       end
     else
-      return 'NO'
+      if @phrase.downcase.scan(/\w/).eql?(@phrase.downcase.scan(/\w/).reverse)
+        return 'YES'
+      else
+        return 'NO'
+      end
     end
   end
 end
