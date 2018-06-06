@@ -12,7 +12,7 @@ class User
     b = Time.local(year1,1,1,0,0,0)
     c = (b - a)
     d = (c/86400).to_i
-    return d
+    return d - 1
   end
 end
 
