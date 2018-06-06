@@ -8,7 +8,6 @@ class User
     hours = (@x+@y) / (60 * 60)
     minutes = ((@x+@y) / 60) % 60
     seconds = (@x+@y) % 60
-
     succ_h = lambda { |n|
           n % 10 == 1 && n % 100 != 11 ?
           :час : [2, 3, 4].include?(n % 10) && ![12, 13, 14].include?(n % 100) ?
@@ -35,5 +34,5 @@ class User
 end
 
 
-newdata = User.new(ARGV[0].to_i,ARGV[0].to_i)
+newdata = User.new(ARGV[0].to_i,Integer(ARGV[1].to_i))
 puts newdata.formatted_duration
